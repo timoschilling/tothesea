@@ -1,0 +1,10 @@
+one:
+  id: 1
+  coast_id: 
+  name: MyString
+  country: MyString
+two:
+  id: 2
+  coast_id: 
+  name: MyString
+  country: MyString

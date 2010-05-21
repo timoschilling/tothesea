@@ -1,0 +1,15 @@
+Neue Kueste
+
+=collection_select 'coast', 'id', Coast.all, :id, :label
+
+%script
+  = 'coast_point_last = ' + CoastPoint.last.to_json
+
+#map_canvas
+
+:javascript
+  var map = new GMap2(document.getElementById("map_canvas"), { size: new GSize(1000,500) } );
+  map.setCenter(new GLatLng(coast_point_last.lat, coast_point_last.lng), 11);
+  GEvent.addListener(map, "click", function(overlay, latlng) {
+    $.post('/coast_points?coast_point[coast_id]='+$('#coast_id').val()+'&coast_point[lat]='+latlng.lat()+'&coast_point[lng]='+latlng.lng())
+  });

@@ -1,0 +1,13 @@
+%div[coast]
+  %p.name
+    %strong Name
+    = h coast.name
+  %p.country
+    %strong Country
+    = h coast.country
+
+  = link_to 'Show', object_path(coast)
+  |
+  = link_to 'Edit', edit_object_path(coast)
+  |
+  = link_to 'Destroy', object_path(coast), :confirm => 'Really destroy coast?', :method => :delete

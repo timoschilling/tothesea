@@ -1,0 +1,18 @@
+%h1
+  Ich will zum Meer ...
+
+%h2
+  ='... noch %.0f Kilometer bis zum Meer' % @closest.distance
+
+%p
+  ="von #{@from.city} nach #{@to.city}"
+
+#map_canvas
+
+%script
+  ="from = {lat:#{@from.lat},lng:#{@from.lng}}"
+  ="to = {lat:#{@to.lat},lng:#{@to.lng}}"
+
+:javascript
+  var map = new GMap2(document.getElementById("map_canvas"), { size: new GSize(1000,500) } );
+  map.setCenter(new GLatLng(to.lat, to.lng), 11);
