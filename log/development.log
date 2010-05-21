@@ -6929,3 +6929,129 @@ Google geocoding. Address: 52.5016,5.075. Result: <?xml version="1.0" encoding="
 Rendering template within layouts/application
 Rendering frontend/index
 Completed in 1037ms (View: 1, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoastPointsController#new (for 127.0.0.1 at 2010-05-21 22:52:19) [GET]
+  [4;36;1mCoastPoint Columns (63.0ms)[0m   [0;1mSHOW FIELDS FROM `coast_points`[0m
+Rendering template within layouts/application
+Rendering coast_points/new
+  [4;35;1mCoast Load (8.5ms)[0m   [0mSELECT * FROM `coasts` [0m
+  [4;36;1mCoast Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `coasts`[0m
+  [4;35;1mCoastPoint Load (21.6ms)[0m   [0mSELECT * FROM `coast_points` ORDER BY coast_points.id DESC LIMIT 1[0m
+Completed in 6365ms (View: 5691, DB: 95) | 200 OK [http://localhost/coast_points/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoastPointsController#new (for 127.0.0.1 at 2010-05-21 22:53:02) [GET]
+  [4;36;1mCoastPoint Columns (36.3ms)[0m   [0;1mSHOW FIELDS FROM `coast_points`[0m
+Rendering template within layouts/application
+Rendering coast_points/new
+  [4;35;1mCoast Load (0.3ms)[0m   [0mSELECT * FROM `coasts` [0m
+  [4;36;1mCoast Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `coasts`[0m
+  [4;35;1mCoastPoint Load (0.2ms)[0m   [0mSELECT * FROM `coast_points` ORDER BY coast_points.id DESC LIMIT 1[0m
+Completed in 5985ms (View: 118, DB: 38) | 200 OK [http://localhost/coast_points/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrontendController#index (for 127.0.0.1 at 2010-05-21 22:53:12) [GET]
+  [4;36;1mCoastPoint Load (145.1ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.898553081796275)*COS(0.125955177473625)*COS(RADIANS(coast_points.lat))*COS(RADIANS(coast_points.lng))+
+ COS(0.898553081796275)*SIN(0.125955177473625)*COS(RADIANS(coast_points.lat))*SIN(RADIANS(coast_points.lng))+
+ SIN(0.898553081796275)*SIN(RADIANS(coast_points.lat))))*6376.77271)
+ AS distance FROM `coast_points` ORDER BY distance ASC LIMIT 1[0m
+  [4;35;1mCoastPoint Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `coast_points`[0m
+Google geocoding. Address: 52.5016,5.075. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>52.5016,5.075</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Lupinestraat 2-14, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><DependentLocality><DependentLocalityName>Volendam</DependentLocalityName><Thoroughfare><ThoroughfareName>Lupinestraat 2-14</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>1131</PostalCodeNumber></PostalCode></DependentLocality></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5050265" south="52.4987312" east="5.0781437" west="5.0718485" />
+    </ExtendedData>
+    <Point><coordinates>5.0753236,52.5015285,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Edisonstraat, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Edisonstraat</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5058076" south="52.4995124" east="5.0783776" west="5.0720824" />
+    </ExtendedData>
+    <Point><coordinates>5.0752300,52.5026600,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Mgr C Veermanlaan, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Mgr C Veermanlaan</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5060276" south="52.4997324" east="5.0757576" west="5.0694624" />
+    </ExtendedData>
+    <Point><coordinates>5.0726100,52.5028800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Vissersstraat, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Vissersstraat</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5019076" south="52.4956124" east="5.0782876" west="5.0719924" />
+    </ExtendedData>
+    <Point><coordinates>5.0751400,52.4987600,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>1131HT Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HT</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051202" south="52.4988249" east="5.0779515" west="5.0716563" />
+    </ExtendedData>
+    <Point><coordinates>5.0748039,52.5019726,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>1131HN Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HN</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051913" south="52.4988961" east="5.0761695" west="5.0698742" />
+    </ExtendedData>
+    <Point><coordinates>5.0730219,52.5020437,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>1131HM Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HM</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051913" south="52.4988961" east="5.0761695" west="5.0698742" />
+    </ExtendedData>
+    <Point><coordinates>5.0730219,52.5020437,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>1131HR Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HR</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5037940" south="52.4974987" east="5.0768777" west="5.0705824" />
+    </ExtendedData>
+    <Point><coordinates>5.0737300,52.5006463,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>1131HW Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HW</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5044571" south="52.4981619" east="5.0778296" west="5.0715344" />
+    </ExtendedData>
+    <Point><coordinates>5.0746820,52.5013095,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>1131JT Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131JT</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051202" south="52.4988249" east="5.0787817" west="5.0724864" />
+    </ExtendedData>
+    <Point><coordinates>5.0756341,52.5019726,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Rendering template within layouts/application
+Rendering frontend/index
+Completed in 2008ms (View: 50, DB: 146) | 200 OK [http://localhost/]
