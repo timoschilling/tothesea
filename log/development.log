@@ -7055,3 +7055,207 @@ Google geocoding. Address: 52.5016,5.075. Result: <?xml version="1.0" encoding="
 Rendering template within layouts/application
 Rendering frontend/index
 Completed in 2008ms (View: 50, DB: 146) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrontendController#index (for 127.0.0.1 at 2010-05-21 23:02:23) [GET]
+  [4;36;1mCoastPoint Load (17.7ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.898553081796275)*COS(0.125955177473625)*COS(RADIANS(coast_points.lat))*COS(RADIANS(coast_points.lng))+
+ COS(0.898553081796275)*SIN(0.125955177473625)*COS(RADIANS(coast_points.lat))*SIN(RADIANS(coast_points.lng))+
+ SIN(0.898553081796275)*SIN(RADIANS(coast_points.lat))))*6376.77271)
+ AS distance FROM `coast_points` ORDER BY distance ASC LIMIT 1[0m
+  [4;35;1mCoastPoint Columns (33.7ms)[0m   [0mSHOW FIELDS FROM `coast_points`[0m
+Google geocoding. Address: 52.5016,5.075. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>52.5016,5.075</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Lupinestraat 2-14, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><DependentLocality><DependentLocalityName>Volendam</DependentLocalityName><Thoroughfare><ThoroughfareName>Lupinestraat 2-14</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>1131</PostalCodeNumber></PostalCode></DependentLocality></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5050265" south="52.4987312" east="5.0781437" west="5.0718485" />
+    </ExtendedData>
+    <Point><coordinates>5.0753236,52.5015285,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Edisonstraat, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Edisonstraat</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5058076" south="52.4995124" east="5.0783776" west="5.0720824" />
+    </ExtendedData>
+    <Point><coordinates>5.0752300,52.5026600,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Mgr C Veermanlaan, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Mgr C Veermanlaan</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5060276" south="52.4997324" east="5.0757576" west="5.0694624" />
+    </ExtendedData>
+    <Point><coordinates>5.0726100,52.5028800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Vissersstraat, 1131 Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Vissersstraat</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5019076" south="52.4956124" east="5.0782876" west="5.0719924" />
+    </ExtendedData>
+    <Point><coordinates>5.0751400,52.4987600,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>1131HT Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HT</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051202" south="52.4988249" east="5.0779515" west="5.0716563" />
+    </ExtendedData>
+    <Point><coordinates>5.0748039,52.5019726,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>1131HN Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HN</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051913" south="52.4988961" east="5.0761695" west="5.0698742" />
+    </ExtendedData>
+    <Point><coordinates>5.0730219,52.5020437,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>1131HM Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HM</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051913" south="52.4988961" east="5.0761695" west="5.0698742" />
+    </ExtendedData>
+    <Point><coordinates>5.0730219,52.5020437,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>1131HR Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HR</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5037940" south="52.4974987" east="5.0768777" west="5.0705824" />
+    </ExtendedData>
+    <Point><coordinates>5.0737300,52.5006463,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>1131HW Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131HW</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5044571" south="52.4981619" east="5.0778296" west="5.0715344" />
+    </ExtendedData>
+    <Point><coordinates>5.0746820,52.5013095,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>1131JT Volendam, The Netherlands</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>NL</CountryNameCode><CountryName>Nederland</CountryName><AdministrativeArea><AdministrativeAreaName>Noord-Holland</AdministrativeAreaName><Locality><LocalityName>Volendam</LocalityName><PostalCode><PostalCodeNumber>1131JT</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="52.5051202" south="52.4988249" east="5.0787817" west="5.0724864" />
+    </ExtendedData>
+    <Point><coordinates>5.0756341,52.5019726,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Rendering template within layouts/application
+Rendering frontend/index
+Completed in 1331ms (View: 17, DB: 52) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrontendController#index (for 127.0.0.1 at 2010-05-21 23:02:53) [GET]
+  [4;36;1mCoastPoint Load (2.3ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.0)*COS(0.0)*COS(RADIANS(coast_points.lat))*COS(RADIANS(coast_points.lng))+
+ COS(0.0)*SIN(0.0)*COS(RADIANS(coast_points.lat))*SIN(RADIANS(coast_points.lng))+
+ SIN(0.0)*SIN(RADIANS(coast_points.lat))))*6376.77271)
+ AS distance FROM `coast_points` ORDER BY distance ASC LIMIT 1[0m
+  [4;35;1mCoastPoint Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `coast_points`[0m
+Google geocoding. Address: 51.3641,3.34946. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>51.3641,3.34946</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Natuurreservaat Het Zwin, 8300 Knokke-Heist, Belgium</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Natuurreservaat Het Zwin</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.3736163" south="51.3457468" east="3.3774892" west="3.3134596" />
+    </ExtendedData>
+    <Point><coordinates>3.3454744,51.3596837,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Knokke, 8300 Knokke-Heist, Belgium</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>BE</CountryNameCode><CountryName>België</CountryName><AdministrativeArea><AdministrativeAreaName>Vlaams Gewest</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>West-Vlaanderen</SubAdministrativeAreaName><Locality><LocalityName>Heist</LocalityName><DependentLocality><DependentLocalityName>Knokke</DependentLocalityName></DependentLocality></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.3702139" south="51.3273975" east="3.3836255" west="3.2741820" />
+    </ExtendedData>
+    <Point><coordinates>3.2870753,51.3414560,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>8300 Knokke-Heist, Belgium</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>BE</CountryNameCode><CountryName>België</CountryName><AdministrativeArea><AdministrativeAreaName>Vlaams Gewest</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>West-Vlaanderen</SubAdministrativeAreaName><Locality><LocalityName>Heist</LocalityName><PostalCode><PostalCodeNumber>8300</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.3702139" south="51.2996665" east="3.3848671" west="3.2642607" />
+    </ExtendedData>
+    <Point><coordinates>3.3140885,51.3317067,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Knokke-Heist, Belgium</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>BE</CountryNameCode><CountryName>België</CountryName><AdministrativeArea><AdministrativeAreaName>Vlaams Gewest</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>West-Vlaanderen</SubAdministrativeAreaName><Locality><LocalityName>Heist</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.3702139" south="51.2961290" east="3.3848671" west="3.2251502" />
+    </ExtendedData>
+    <Point><coordinates>3.2353071,51.3398001,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Bruges, Belgium</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>BE</CountryNameCode><CountryName>België</CountryName><AdministrativeArea><AdministrativeAreaName>Vlaams Gewest</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>West-Vlaanderen</SubAdministrativeAreaName><AddressLine>Brugge</AddressLine></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.3702139" south="51.0136514" east="3.4107612" west="3.0401016" />
+    </ExtendedData>
+    <Point><coordinates>3.2091917,51.1773920,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>West Flanders, Belgium</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>BE</CountryNameCode><CountryName>België</CountryName><AdministrativeArea><AdministrativeAreaName>Vlaams Gewest</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>West-Vlaanderen</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.3702139" south="50.7081320" east="3.5234400" west="2.5456398" />
+    </ExtendedData>
+    <Point><coordinates>3.1457942,51.0536024,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Flemish Region, Belgium</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>BE</CountryNameCode><CountryName>België</CountryName><AdministrativeArea><AdministrativeAreaName>Vlaams Gewest</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.5050807" south="50.6874285" east="5.9111043" west="2.5456398" />
+    </ExtendedData>
+    <Point><coordinates>4.4477809,51.0950244,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Belgium</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>BE</CountryNameCode><CountryName>Belgique</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="51.5050807" south="49.4972655" east="6.4079065" west="2.5241000" />
+    </ExtendedData>
+    <Point><coordinates>4.4699360,50.5038870,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>North Sea</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North Sea</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="61.0000001" south="50.8336666" east="10.7446666" west="-4.2267600" />
+    </ExtendedData>
+    <Point><coordinates>1.8605280,56.9072801,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>Europe</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Europe</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="82.7021697" south="33.8978000" east="74.1357000" west="-28.0371000" />
+    </ExtendedData>
+    <Point><coordinates>15.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Rendering template within layouts/application
+Rendering frontend/index
+Completed in 1827ms (View: 11, DB: 5) | 200 OK [http://localhost/]
