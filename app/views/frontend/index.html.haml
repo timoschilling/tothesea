@@ -7,6 +7,13 @@
 %p
   ="von #{@from.city} nach #{@to.city}"
 
+/ %script{:src => "http://platform.twitter.com/anywhere.js?id=U5l3QgisKZwwKFZyGq6dfg&v=1"}
+/ #tbox
+/ :javascript
+/   twttr.anywhere(function (T) {
+/     T("#tbox").tweetBox();
+/   });
+
 #map_canvas
 
 %script
